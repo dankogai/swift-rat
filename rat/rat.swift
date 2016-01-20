@@ -13,15 +13,6 @@
 
 public protocol RatElement: SignedIntegerType, IntegerArithmeticType {
     init(_: Int)
-    init(_: Int16)
-    init(_: Int32)
-    init(_: Int64)
-    init(_: Int8)
-    init(_: UInt)
-    init(_: UInt16)
-    init(_: UInt32)
-    init(_: UInt64)
-    init(_: UInt8)
     init(_: Double)
     init(_: Float)
     init(_: Self)
@@ -71,16 +62,6 @@ public struct Rat<T:RatElement> : AbsoluteValuable, Equatable, Comparable, Custo
     public init() {
         self.init(T(0), 1)
     }
-    init(i: Int)    { self.init(T(1), 1) }
-    init(i: Int16)  { self.init(T(1), 1) }
-    init(i: Int32)  { self.init(T(1), 1) }
-    init(i: Int64)  { self.init(T(1), 1) }
-    init(i: Int8)   { self.init(T(1), 1) }
-    init(i: UInt)   { self.init(T(1), 1) }
-    init(i: UInt16) { self.init(T(1), 1) }
-    init(i: UInt32) { self.init(T(1), 1) }
-    init(i: UInt64) { self.init(T(1), 1) }
-    init(i: UInt8)  { self.init(T(1), 1) }
     public init(_ r:Double) {
         var num = r
         var den = 1
